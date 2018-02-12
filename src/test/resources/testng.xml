@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testing web-service" thread-count="2" parallel="tests" preserve-order="true">
+    <test name="test web-service">
+        <packages>
+            <package name="epam.com.webservicetest.test" />
+        </packages>
+</test>
+</suite>
