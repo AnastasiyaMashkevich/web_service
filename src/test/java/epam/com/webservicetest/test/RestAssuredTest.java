@@ -24,10 +24,12 @@ public class RestAssuredTest {
     @Test
     public void checkResponseHeader() {
         Assert.assertTrue(service.isHeaderExist(CONTENT_TYPE));
-        Assert.assertTrue(service.getHeaderValue(CONTENT_TYPE).equals("application/json; charset=utf-8"));
+        Assert.assertTrue(service.getHeaderValue(CONTENT_TYPE).equals("application/json; charset=utf-8"),
+               CONTENT_TYPE + "header has wrong value. ");
     }
     @Test
     public void checkResponseBody() {
-        Assert.assertEquals(service.getUsers().length, 10);
+        Assert.assertEquals(service.getUsers().length, 10,
+                "Sum of users is not correct.");
     }
 }
